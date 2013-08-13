@@ -1,0 +1,2712 @@
+---
+:churn:
+  :changes:
+  - :file_path: app/controllers/writings_controller.rb
+    :times_changed: 17
+  - :file_path: spec/controllers/writings_controller_spec.rb
+    :times_changed: 16
+  - :file_path: Gemfile
+    :times_changed: 14
+  - :file_path: app/models/writing.rb
+    :times_changed: 13
+  - :file_path: Gemfile.lock
+    :times_changed: 13
+  - :file_path: lib/tasks/mysql2pg.rake
+    :times_changed: 12
+  - :file_path: config/routes.rb
+    :times_changed: 10
+  - :file_path: spec/models/writing_spec.rb
+    :times_changed: 10
+  :class_churn:
+  - klass:
+      file: app/controllers/writings_controller.rb
+      klass: WritingsController
+    times_changed: 4
+  - klass:
+      file: app/models/category.rb
+      klass: Category
+    times_changed: 2
+  - klass:
+      file: app/decorators/writing_decorator.rb
+      klass: WritingDecorator
+    times_changed: 2
+  - klass:
+      file: app/decorators/writings_decorator.rb
+      klass: WritingsDecorator
+    times_changed: 1
+  - klass:
+      file: app/models/writing.rb
+      klass: Writing
+    times_changed: 1
+  - klass:
+      file: app/models/tagging.rb
+      klass: Tagging
+    times_changed: 1
+  - klass:
+      file: config/application.rb
+      klass: Application
+    times_changed: 1
+  - klass:
+      file: app/models/article.rb
+      klass: Article
+    times_changed: 1
+  - klass:
+      file: app/models/document.rb
+      klass: Document
+    times_changed: 1
+  - klass:
+      file: app/models/user.rb
+      klass: User
+    times_changed: 1
+  - klass:
+      file: app/models/prefix.rb
+      klass: Prefix
+    times_changed: 1
+  :method_churn:
+  - method:
+      file: app/controllers/writings_controller.rb
+      klass: WritingsController
+      method: WritingsController#writings
+    times_changed: 2
+  - method:
+      file: app/decorators/writing_decorator.rb
+      klass: WritingDecorator
+      method: WritingDecorator#formatted_text
+    times_changed: 1
+  - method:
+      file: app/controllers/writings_controller.rb
+      klass: WritingsController
+      method: WritingsController#init_filter
+    times_changed: 1
+  - method:
+      file: app/controllers/writings_controller.rb
+      klass: WritingsController
+      method: WritingsController#index
+    times_changed: 1
+  :changed_files: []
+  :changed_classes: []
+  :changed_methods: []
+:flog:
+  :total: 208.34690768195927
+  :average: 5.081631894681934
+  :method_containers:
+  - :name: WritingsController
+    :path: app/controllers/writings_controller.rb
+    :total_score: 60.54967546983191
+    :highest_score: 25.492155656201383
+    :average_score: 8.649953638547416
+    :methods:
+      WritingsController#index:
+        :operators:
+          :assignment: 5.0
+          :params: 5.5
+          :[]: 9.600000000000001
+          :cookies: 5.699999999999999
+          :branch: 2.2
+          :writings: 1.0
+          :all: 2.0
+          :find: 1.1
+        :score: 25.492155656201383
+        :path: app/controllers/writings_controller.rb:2
+      WritingsController#show:
+        :operators:
+          :assignment: 1.0
+          :params: 1.5999999999999999
+          :[]: 1.4
+          :find: 1.2
+          :decorate: 1.0
+        :score: 5.295280917949491
+        :path: app/controllers/writings_controller.rb:14
+      WritingsController#set_per:
+        :operators:
+          :assignment: 1.0
+          :cookies: 1.0
+          :params: 1.2
+          :[]: 1.0
+          :redirect_to: 1.0
+        :score: 4.317406628984581
+        :path: app/controllers/writings_controller.rb:30
+      WritingsController#set_order:
+        :operators:
+          :assignment: 2.0
+          :cookies: 2.0
+          :params: 2.4
+          :[]: 2.0
+          :redirect_to: 1.0
+        :score: 7.66550715869472
+        :path: app/controllers/writings_controller.rb:35
+      WritingsController#init_filter:
+        :operators:
+          :assignment: 3.0
+          :cookies: 3.0
+          :redirect_to: 1.0
+        :score: 5.0
+        :path: app/controllers/writings_controller.rb:41
+      WritingsController#none:
+        :operators:
+          :private: 1.0
+        :score: 1.0
+        :path: 
+      WritingsController#writings:
+        :operators:
+          :assignment: 6.300000000000001
+          :lit_fixnum: 0.25
+          :branch: 2.0
+          :!=: 1.0
+          :sub: 1.1
+          :find_by_prefix: 1.2
+          :page: 1.0
+          :==: 1.0
+          :per: 2.2
+          :order: 1.0
+          :decorate: 1.0
+        :score: 11.779325108001732
+        :path: app/controllers/writings_controller.rb:49
+  - :name: Writing
+    :path: ''
+    :total_score: 13.3
+    :highest_score: 13.3
+    :average_score: 13.3
+    :methods:
+      Writing#none:
+        :operators:
+          :attr_accessible: 1.0
+          :belongs_to: 3.0
+          :has_many: 2.0
+          :validates_presence_of: 3.0
+          :validates: 1.0
+          :validates_inclusion_of: 2.0
+          :lit_fixnum: 0.3
+          :paginates_per: 1.0
+        :score: 13.3
+        :path: 
+  - :name: Writing::find_by_prefix
+    :path: app/models/writing.rb
+    :total_score: 9.608850087289323
+    :highest_score: 9.608850087289323
+    :average_score: 9.608850087289323
+    :methods:
+      Writing::find_by_prefix:
+        :operators:
+          :assignment: 2.2
+          :branch: 1.0
+          :find: 1.2000000000000002
+          :where: 1.6
+          :joins: 5.0
+          :all: 1.5
+        :score: 9.608850087289323
+        :path: app/models/writing.rb:22
+  - :name: Prefix
+    :path: ''
+    :total_score: 9.2
+    :highest_score: 9.2
+    :average_score: 9.2
+    :methods:
+      Prefix#none:
+        :operators:
+          :has_many: 4.0
+          :attr_accessible: 1.0
+          :validates: 1.0
+          :validates_presence_of: 1.0
+          :regexp: 1.2
+          :validates_format_of: 1.0
+        :score: 9.2
+        :path: 
+  - :name: WritingDecorator
+    :path: app/decorators/writing_decorator.rb
+    :total_score: 40.25663593019382
+    :highest_score: 8.856635930193812
+    :average_score: 4.472959547799314
+    :methods:
+      WritingDecorator#none:
+        :operators:
+          :delegate_all: 1.0
+        :score: 1.0
+        :path: 
+      WritingDecorator#title_link:
+        :operators:
+          :h: 2.5999999999999996
+          :object: 2.8
+          :title: 1.2
+          :writing_path: 1.2
+          :link_to: 1.0
+        :score: 8.8
+        :path: app/decorators/writing_decorator.rb:5
+      WritingDecorator#formatted_text:
+        :operators:
+          :assignment: 1.0
+          :object: 3.0
+          :formatter: 1.4
+          :name: 1.2
+          :create: 1.0
+          :content: 1.2
+          :convert: 1.0
+        :score: 8.856635930193812
+        :path: app/decorators/writing_decorator.rb:9
+      WritingDecorator#created_at_time:
+        :operators:
+          :object: 1.4
+          :created_at: 1.2
+          :strftime: 1.0
+        :score: 3.5999999999999996
+        :path: app/decorators/writing_decorator.rb:14
+      WritingDecorator#created_at_date:
+        :operators:
+          :object: 1.4
+          :created_at: 1.2
+          :strftime: 1.0
+        :score: 3.5999999999999996
+        :path: app/decorators/writing_decorator.rb:18
+      WritingDecorator#created_at_date_simple:
+        :operators:
+          :object: 1.4
+          :created_at: 1.2
+          :strftime: 1.0
+        :score: 3.5999999999999996
+        :path: app/decorators/writing_decorator.rb:23
+      WritingDecorator#updated_at_time:
+        :operators:
+          :object: 1.4
+          :updated_at: 1.2
+          :strftime: 1.0
+        :score: 3.5999999999999996
+        :path: app/decorators/writing_decorator.rb:27
+      WritingDecorator#updated_at_date:
+        :operators:
+          :object: 1.4
+          :updated_at: 1.2
+          :strftime: 1.0
+        :score: 3.5999999999999996
+        :path: app/decorators/writing_decorator.rb:31
+      WritingDecorator#updated_at_date_simple:
+        :operators:
+          :object: 1.4
+          :updated_at: 1.2
+          :strftime: 1.0
+        :score: 3.5999999999999996
+        :path: app/decorators/writing_decorator.rb:35
+  - :name: Tagging
+    :path: ''
+    :total_score: 8.0
+    :highest_score: 8.0
+    :average_score: 8.0
+    :methods:
+      Tagging#none:
+        :operators:
+          :attr_accessible: 1.0
+          :belongs_to: 3.0
+          :validates: 1.0
+          :validates_presence_of: 3.0
+        :score: 8.0
+        :path: 
+  - :name: Category
+    :path: app/models/category.rb
+    :total_score: 8.2
+    :highest_score: 6.0
+    :average_score: 4.1
+    :methods:
+      Category#none:
+        :operators:
+          :belongs_to: 1.0
+          :has_many: 1.0
+          :attr_accessible: 1.0
+          :validates_presence_of: 2.0
+          :validates: 1.0
+        :score: 6.0
+        :path: 
+      Category#articles:
+        :operators:
+          :writings: 1.2
+          :where: 1.0
+        :score: 2.2
+        :path: app/models/category.rb:13
+  - :name: Ability
+    :path: app/models/ability.rb
+    :total_score: 7.688585061331158
+    :highest_score: 5.688585061331158
+    :average_score: 3.844292530665579
+    :methods:
+      Ability#none:
+        :operators:
+          :include: 2.0
+        :score: 2.0
+        :path: 
+      Ability#initialize:
+        :operators:
+          :can: 3.4000000000000004
+          :branch: 1.0
+          :roles_name: 1.2
+          :include?: 1.0
+        :score: 5.688585061331158
+        :path: app/models/ability.rb:4
+  - :name: MoniwikiFormatter
+    :path: app/models/moniwiki_formatter.rb
+    :total_score: 5.2
+    :highest_score: 5.2
+    :average_score: 5.2
+    :methods:
+      MoniwikiFormatter#convert:
+        :operators:
+          :new: 1.5999999999999999
+          :decode: 1.4
+          :to_moni: 1.2
+          :html_safe: 1.0
+        :score: 5.2
+        :path: app/models/moniwiki_formatter.rb:2
+  - :name: User
+    :path: ''
+    :total_score: 5.0
+    :highest_score: 5.0
+    :average_score: 5.0
+    :methods:
+      User#none:
+        :operators:
+          :devise: 2.0
+          :attr_accessible: 2.0
+          :rolify: 1.0
+        :score: 5.0
+        :path: 
+  - :name: Tag
+    :path: app/models/tag.rb
+    :total_score: 7.2
+    :highest_score: 5.0
+    :average_score: 3.6
+    :methods:
+      Tag#none:
+        :operators:
+          :attr_accessible: 1.0
+          :has_many: 2.0
+          :validates_presence_of: 1.0
+          :validates_uniqueness_of: 1.0
+        :score: 5.0
+        :path: 
+      Tag#articles:
+        :operators:
+          :writings: 1.2
+          :where: 1.0
+        :score: 2.2
+        :path: app/models/tag.rb:9
+  - :name: FormatterFactory::create
+    :path: app/models/formatter_factory.rb
+    :total_score: 4.742362280551751
+    :highest_score: 4.742362280551751
+    :average_score: 4.742362280551751
+    :methods:
+      FormatterFactory::create:
+        :operators:
+          :branch: 3.2
+          :instance: 3.5000000000000004
+        :score: 4.742362280551751
+        :path: app/models/formatter_factory.rb:3
+  - :name: Formatter
+    :path: app/models/formatter.rb
+    :total_score: 6.2
+    :highest_score: 4.0
+    :average_score: 3.1
+    :methods:
+      Formatter#none:
+        :operators:
+          :has_many: 1.0
+          :attr_accessible: 1.0
+          :validates_presence_of: 1.0
+          :validates_uniqueness_of: 1.0
+        :score: 4.0
+        :path: 
+      Formatter#articles:
+        :operators:
+          :writings: 1.2
+          :where: 1.0
+        :score: 2.2
+        :path: app/models/formatter.rb:8
+  - :name: Article
+    :path: ''
+    :total_score: 3.6999999999999997
+    :highest_score: 3.6999999999999997
+    :average_score: 3.6999999999999997
+    :methods:
+      Article#none:
+        :operators:
+          :branch: 1.2
+          :lambda: 1.2
+          :where: 1.3
+          :default_scope: 1.0
+        :score: 3.6999999999999997
+        :path: 
+  - :name: Document
+    :path: ''
+    :total_score: 3.6999999999999997
+    :highest_score: 3.6999999999999997
+    :average_score: 3.6999999999999997
+    :methods:
+      Document#none:
+        :operators:
+          :branch: 1.2
+          :lambda: 1.2
+          :where: 1.3
+          :default_scope: 1.0
+        :score: 3.6999999999999997
+        :path: 
+  - :name: Tag::create_many_tags
+    :path: app/models/tag.rb
+    :total_score: 3.448187929913334
+    :highest_score: 3.448187929913334
+    :average_score: 3.448187929913334
+    :methods:
+      Tag::create_many_tags:
+        :operators:
+          :branch: 1.0
+          :split: 1.2
+          :each: 1.0
+          :create: 1.1
+        :score: 3.448187929913334
+        :path: app/models/tag.rb:13
+  - :name: MarkdownFormatter
+    :path: app/models/markdown_formatter.rb
+    :total_score: 3.3526109228480423
+    :highest_score: 3.3526109228480423
+    :average_score: 3.3526109228480423
+    :methods:
+      MarkdownFormatter#convert:
+        :operators:
+          :assignment: 1.0
+          :new: 1.0
+          :render: 1.2
+          :html_safe: 1.0
+        :score: 3.3526109228480423
+        :path: app/models/markdown_formatter.rb:2
+  - :name: Role
+    :path: ''
+    :total_score: 3.0
+    :highest_score: 3.0
+    :average_score: 3.0
+    :methods:
+      Role#none:
+        :operators:
+          :has_and_belongs_to_many: 1.0
+          :belongs_to: 1.0
+          :scopify: 1.0
+        :score: 3.0
+        :path: 
+  - :name: BaseFormatter
+    :path: app/models/base_formatter.rb
+    :total_score: 3.0
+    :highest_score: 2.0
+    :average_score: 1.5
+    :methods:
+      BaseFormatter#none:
+        :operators:
+          :include: 2.0
+        :score: 2.0
+        :path: 
+      BaseFormatter#corvent:
+        :operators:
+          :raise: 1.0
+        :score: 1.0
+        :path: app/models/base_formatter.rb:4
+  - :name: Migraiton
+    :path: ''
+    :total_score: 1.0
+    :highest_score: 1.0
+    :average_score: 1.0
+    :methods:
+      Migraiton#none:
+        :operators:
+          :attr_accessible: 1.0
+        :score: 1.0
+        :path: 
+  - :name: WritingsDecorator
+    :path: ''
+    :total_score: 1.0
+    :highest_score: 1.0
+    :average_score: 1.0
+    :methods:
+      WritingsDecorator#none:
+        :operators:
+          :delegate: 1.0
+        :score: 1.0
+        :path: 
+  - :name: ApplicationController
+    :path: ''
+    :total_score: 1.0
+    :highest_score: 1.0
+    :average_score: 1.0
+    :methods:
+      ApplicationController#none:
+        :operators:
+          :protect_from_forgery: 1.0
+        :score: 1.0
+        :path: 
+:flay:
+  :total_score: '0'
+  :matches: []
+:reek:
+  :matches:
+  - :file_path: app/controllers/application_controller.rb
+    :code_smells:
+    - :method: ApplicationController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/controllers/main_controller.rb
+    :code_smells:
+    - :method: MainController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/controllers/writings_controller.rb
+    :code_smells:
+    - :method: WritingsController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: WritingsController#index
+      :message: calls cookies 4 times
+      :type: DuplicateMethodCall
+    - :method: WritingsController#index
+      :message: calls cookies[:order] twice
+      :type: DuplicateMethodCall
+    - :method: WritingsController#index
+      :message: calls params 4 times
+      :type: DuplicateMethodCall
+    - :method: WritingsController#index
+      :message: calls params[:id] 3 times
+      :type: DuplicateMethodCall
+    - :method: WritingsController#index
+      :message: has approx 7 statements
+      :type: TooManyStatements
+    - :method: WritingsController#init_filter
+      :message: calls cookies 3 times
+      :type: DuplicateMethodCall
+    - :method: WritingsController#set_order
+      :message: calls cookies twice
+      :type: DuplicateMethodCall
+    - :method: WritingsController#set_order
+      :message: calls params twice
+      :type: DuplicateMethodCall
+    - :method: WritingsController#writings
+      :message: doesn't depend on instance state
+      :type: UtilityFunction
+    - :method: WritingsController#writings
+      :message: has 5 parameters
+      :type: LongParameterList
+    - :method: WritingsController#writings
+      :message: has approx 7 statements
+      :type: TooManyStatements
+    - :method: WritingsController#writings
+      :message: refers to tmp more than self
+      :type: FeatureEnvy
+  - :file_path: app/decorators/writing_decorator.rb
+    :code_smells:
+    - :method: WritingDecorator#formatted_text
+      :message: calls object twice
+      :type: DuplicateMethodCall
+    - :method: WritingDecorator#title_link
+      :message: calls h twice
+      :type: DuplicateMethodCall
+    - :method: WritingDecorator#title_link
+      :message: calls object twice
+      :type: DuplicateMethodCall
+  - :file_path: app/decorators/writings_decorator.rb
+    :code_smells:
+    - :method: WritingsDecorator
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/helpers/application_helper.rb
+    :code_smells: []
+  - :file_path: app/helpers/main_helper.rb
+    :code_smells: []
+  - :file_path: app/helpers/writing_helper.rb
+    :code_smells: []
+  - :file_path: app/models/ability.rb
+    :code_smells:
+    - :method: Ability
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/article.rb
+    :code_smells:
+    - :method: Article
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/base_formatter.rb
+    :code_smells:
+    - :method: BaseFormatter
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: BaseFormatter#corvent
+      :message: has unused parameter 'content'
+      :type: UnusedParameters
+  - :file_path: app/models/category.rb
+    :code_smells:
+    - :method: Category
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/document.rb
+    :code_smells:
+    - :method: Document
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/formatter.rb
+    :code_smells:
+    - :method: Formatter
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/formatter_factory.rb
+    :code_smells:
+    - :method: FormatterFactory
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/markdown_formatter.rb
+    :code_smells:
+    - :method: MarkdownFormatter
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: MarkdownFormatter#convert
+      :message: doesn't depend on instance state
+      :type: UtilityFunction
+    - :method: MarkdownFormatter#convert
+      :message: refers to markdown more than self
+      :type: FeatureEnvy
+  - :file_path: app/models/migraiton.rb
+    :code_smells:
+    - :method: Migraiton
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/moniwiki_formatter.rb
+    :code_smells:
+    - :method: MoniwikiFormatter
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: MoniwikiFormatter#convert
+      :message: doesn't depend on instance state
+      :type: UtilityFunction
+  - :file_path: app/models/prefix.rb
+    :code_smells:
+    - :method: Prefix
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/role.rb
+    :code_smells:
+    - :method: Role
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/tag.rb
+    :code_smells:
+    - :method: Tag
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/tagging.rb
+    :code_smells:
+    - :method: Tagging
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/text_formatter.rb
+    :code_smells:
+    - :method: TextFormatter
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/user.rb
+    :code_smells:
+    - :method: User
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/writing.rb
+    :code_smells:
+    - :method: Writing
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: Writing#self.find_by_prefix
+      :message: is controlled by argument id
+      :type: ControlParameter
+  - :file_path: lib/mysql2/test.rb
+    :code_smells: []
+:roodi:
+  :total:
+  - Found 0 errors.
+  :problems: []
+:rails_best_practices:
+  :total:
+  - Found 18 warnings.
+  :problems:
+  - :file: db/schema.rb
+    :line: '20'
+    :problem: always add db index (categories => [prefix_id])
+  - :file: db/schema.rb
+    :line: '76'
+    :problem: always add db index (taggings => [tag_id])
+  - :file: db/schema.rb
+    :line: '76'
+    :problem: always add db index (taggings => [writing_id])
+  - :file: db/schema.rb
+    :line: '114'
+    :problem: always add db index (writings => [category_id])
+  - :file: app/models/tag.rb
+    :line: '15'
+    :problem: use 'create!' instead of 'create' as the latter may not always save
+  - :file: db/seeds.rb
+    :line: '11'
+    :problem: use 'create!' instead of 'create' as the latter may not always save
+  - :file: app/controllers/writings_controller.rb
+    :line: '49'
+    :problem: move model logic into model (tmp use_count > 4)
+  - :file: app/helpers/writing_helper.rb
+    :line: '1'
+    :problem: remove empty helpers
+  - :file: app/helpers/main_helper.rb
+    :line: '1'
+    :problem: remove empty helpers
+  - :file: app/models/markdown_formatter.rb
+    :line: '2'
+    :problem: remove unused methods (MarkdownFormatter#convert)
+  - :file: app/models/moniwiki_formatter.rb
+    :line: '2'
+    :problem: remove unused methods (MoniwikiFormatter#convert)
+  - :file: app/models/text_formatter.rb
+    :line: '2'
+    :problem: remove unused methods (TextFormatter#convert)
+  - :file: app/models/formatter.rb
+    :line: '8'
+    :problem: remove unused methods (Formatter#articles)
+  - :file: app/models/category.rb
+    :line: '13'
+    :problem: remove unused methods (Category#articles)
+  - :file: app/models/tag.rb
+    :line: '9'
+    :problem: remove unused methods (Tag#articles)
+  - :file: app/models/tag.rb
+    :line: '13'
+    :problem: remove unused methods (Tag#create_many_tags)
+  - :file: app/models/base_formatter.rb
+    :line: '4'
+    :problem: remove unused methods (BaseFormatter#corvent)
+  - :file: config/routes.rb
+    :line: '15'
+    :problem: 'restrict auto-generated routes writings (only: [:show, :new, :create,
+      :edit, :destroy, :index])'
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: ''
+      :complexity: 47
+      :lines: 284
+      :methods: []
+    :filename: lib/moni_formatter/spec/formatter/formatter_spec.rb
+  - :classes:
+    - :class_name: WritingsController
+      :complexity: 14
+      :lines: 63
+      :methods:
+      - :name: WritingsController#writings
+        :complexity: 3
+        :lines: 14
+      - :name: WritingsController#index
+        :complexity: 3
+        :lines: 10
+      - :name: WritingsController#set_order
+        :complexity: 1
+        :lines: 4
+      - :name: WritingsController#set_per
+        :complexity: 1
+        :lines: 3
+      - :name: WritingsController#init_filter
+        :complexity: 1
+        :lines: 5
+      - :name: WritingsController#edit
+        :complexity: 1
+        :lines: 1
+      - :name: WritingsController#create
+        :complexity: 1
+        :lines: 1
+      - :name: WritingsController#new
+        :complexity: 1
+        :lines: 1
+      - :name: WritingsController#show
+        :complexity: 1
+        :lines: 2
+      - :name: WritingsController#destroy
+        :complexity: 1
+        :lines: 1
+    :filename: app/controllers/writings_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Plugin
+      :complexity: 11
+      :lines: 77
+      :methods:
+      - :name: Plugin#self.attachment
+        :complexity: 2
+        :lines: 15
+      - :name: Plugin#self.miniblog
+        :complexity: 2
+        :lines: 12
+      - :name: Plugin#self.html
+        :complexity: 1
+        :lines: 2
+      - :name: Plugin#self.br
+        :complexity: 1
+        :lines: 2
+      - :name: Plugin#self.footnotes
+        :complexity: 1
+        :lines: 2
+      - :name: Plugin#self.footnote
+        :complexity: 1
+        :lines: 7
+      - :name: Plugin#self.footnotes_init
+        :complexity: 1
+        :lines: 3
+      - :name: Plugin#self.youtube
+        :complexity: 1
+        :lines: 8
+      - :name: Plugin#self.cross
+        :complexity: 1
+        :lines: 2
+    :filename: lib/moni_formatter/lib/plugin.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 9
+      :lines: 46
+      :methods: []
+    :filename: lib/moni_formatter/spec/formatter/plugin_spec.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: WritingDecorator
+      :complexity: 8
+      :lines: 46
+      :methods:
+      - :name: WritingDecorator#updated_at_date_simple
+        :complexity: 1
+        :lines: 2
+      - :name: WritingDecorator#updated_at_date
+        :complexity: 1
+        :lines: 2
+      - :name: WritingDecorator#updated_at_time
+        :complexity: 1
+        :lines: 2
+      - :name: WritingDecorator#created_at_date_simple
+        :complexity: 1
+        :lines: 2
+      - :name: WritingDecorator#created_at_date
+        :complexity: 1
+        :lines: 2
+      - :name: WritingDecorator#created_at_time
+        :complexity: 1
+        :lines: 2
+      - :name: WritingDecorator#formatted_text
+        :complexity: 1
+        :lines: 3
+      - :name: WritingDecorator#title_link
+        :complexity: 1
+        :lines: 2
+    :filename: app/decorators/writing_decorator.rb
+  - :classes:
+    - :class_name: Tag
+      :complexity: 3
+      :lines: 17
+      :methods:
+      - :name: Tag#self.create_many_tags
+        :complexity: 2
+        :lines: 4
+      - :name: Tag#articles
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/tag.rb
+  - :classes:
+    - :class_name: FormatterFactory
+      :complexity: 3
+      :lines: 12
+      :methods:
+      - :name: FormatterFactory#self.create
+        :complexity: 3
+        :lines: 9
+    :filename: app/models/formatter_factory.rb
+  - :classes:
+    - :class_name: Ability
+      :complexity: 2
+      :lines: 42
+      :methods:
+      - :name: Ability#initialize
+        :complexity: 2
+        :lines: 8
+    :filename: app/models/ability.rb
+  - :classes:
+    - :class_name: WritingController
+      :complexity: 2
+      :lines: 9
+      :methods:
+      - :name: WritingController#prefix
+        :complexity: 1
+        :lines: 3
+      - :name: WritingController#index
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/writing_controller.rb
+  - :classes:
+    - :class_name: Writing
+      :complexity: 2
+      :lines: 29
+      :methods:
+      - :name: Writing#self.find_by_prefix
+        :complexity: 2
+        :lines: 7
+    :filename: app/models/writing.rb
+  - :classes:
+    - :class_name: Formatter
+      :complexity: 1
+      :lines: 10
+      :methods:
+      - :name: Formatter#articles
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/formatter.rb
+  - :classes:
+    - :class_name: TextFormatter
+      :complexity: 1
+      :lines: 4
+      :methods:
+      - :name: TextFormatter#convert
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/text_formatter.rb
+  - :classes:
+    - :class_name: BaseFormatter
+      :complexity: 1
+      :lines: 6
+      :methods:
+      - :name: BaseFormatter#corvent
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/base_formatter.rb
+  - :classes:
+    - :class_name: Category
+      :complexity: 1
+      :lines: 15
+      :methods:
+      - :name: Category#articles
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/category.rb
+  - :classes:
+    - :class_name: MoniwikiFormatter
+      :complexity: 1
+      :lines: 4
+      :methods:
+      - :name: MoniwikiFormatter#convert
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/moniwiki_formatter.rb
+  - :classes:
+    - :class_name: MarkdownFormatter
+      :complexity: 1
+      :lines: 9
+      :methods:
+      - :name: MarkdownFormatter#convert
+        :complexity: 1
+        :lines: 7
+    :filename: app/models/markdown_formatter.rb
+  - :classes:
+    - :class_name: String
+      :complexity: 1
+      :lines: 4
+      :methods:
+      - :name: String#to_moni
+        :complexity: 1
+        :lines: 2
+    :filename: lib/moni_formatter/lib/string.rb
+  - :classes:
+    - :class_name: MainController
+      :complexity: 1
+      :lines: 3
+      :methods:
+      - :name: MainController#index
+        :complexity: 1
+        :lines: 1
+    :filename: app/controllers/main_controller.rb
+  - :classes:
+    - :class_name: Tagging
+      :complexity: 0
+      :lines: 15
+      :methods: []
+    :filename: app/models/tagging.rb
+  - :classes:
+    - :class_name: MainHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/main_helper.rb
+  - :classes:
+    - :class_name: WritingHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/writing_helper.rb
+  - :classes:
+    - :class_name: Prefix
+      :complexity: 0
+      :lines: 10
+      :methods: []
+    :filename: app/models/prefix.rb
+  - :classes:
+    - :class_name: ApplicationController
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/controllers/application_controller.rb
+  - :classes:
+    - :class_name: ApplicationHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/application_helper.rb
+  - :classes:
+    - :class_name: WritingsDecorator
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/decorators/writings_decorator.rb
+  - :classes:
+    - :class_name: User
+      :complexity: 0
+      :lines: 18
+      :methods: []
+    :filename: app/models/user.rb
+  - :classes:
+    - :class_name: Role
+      :complexity: 0
+      :lines: 5
+      :methods: []
+    :filename: app/models/role.rb
+  - :classes:
+    - :class_name: Migraiton
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/models/migraiton.rb
+  - :classes:
+    - :class_name: Document
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/models/document.rb
+  - :classes:
+    - :class_name: Article
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/models/article.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: lib/moni_formatter/spec/spec_helper.rb
+  :classes:
+  - :name: ''
+    :complexity: 47
+    :lines: 284
+  - :name: WritingsController
+    :complexity: 14
+    :lines: 63
+    :defs:
+    - :name: WritingsController#index
+      :complexity: 3
+      :lines: 10
+    - :name: WritingsController#show
+      :complexity: 1
+      :lines: 2
+    - :name: WritingsController#new
+      :complexity: 1
+      :lines: 1
+    - :name: WritingsController#create
+      :complexity: 1
+      :lines: 1
+    - :name: WritingsController#edit
+      :complexity: 1
+      :lines: 1
+    - :name: WritingsController#destroy
+      :complexity: 1
+      :lines: 1
+    - :name: WritingsController#set_per
+      :complexity: 1
+      :lines: 3
+    - :name: WritingsController#set_order
+      :complexity: 1
+      :lines: 4
+    - :name: WritingsController#init_filter
+      :complexity: 1
+      :lines: 5
+    - :name: WritingsController#writings
+      :complexity: 3
+      :lines: 14
+  - :name: Plugin
+    :complexity: 11
+    :lines: 77
+    :defs:
+    - :name: Plugin#self.cross
+      :complexity: 1
+      :lines: 2
+    - :name: Plugin#self.youtube
+      :complexity: 1
+      :lines: 8
+    - :name: Plugin#self.attachment
+      :complexity: 2
+      :lines: 15
+    - :name: Plugin#self.footnote
+      :complexity: 1
+      :lines: 7
+    - :name: Plugin#self.html
+      :complexity: 1
+      :lines: 2
+    - :name: Plugin#self.br
+      :complexity: 1
+      :lines: 2
+    - :name: Plugin#self.miniblog
+      :complexity: 2
+      :lines: 12
+    - :name: Plugin#self.footnotes
+      :complexity: 1
+      :lines: 2
+    - :name: Plugin#self.footnotes_init
+      :complexity: 1
+      :lines: 3
+  - :name: ''
+    :complexity: 9
+    :lines: 46
+  - :name: WritingDecorator
+    :complexity: 8
+    :lines: 46
+    :defs:
+    - :name: WritingDecorator#title_link
+      :complexity: 1
+      :lines: 2
+    - :name: WritingDecorator#formatted_text
+      :complexity: 1
+      :lines: 3
+    - :name: WritingDecorator#created_at_time
+      :complexity: 1
+      :lines: 2
+    - :name: WritingDecorator#created_at_date
+      :complexity: 1
+      :lines: 2
+    - :name: WritingDecorator#created_at_date_simple
+      :complexity: 1
+      :lines: 2
+    - :name: WritingDecorator#updated_at_time
+      :complexity: 1
+      :lines: 2
+    - :name: WritingDecorator#updated_at_date
+      :complexity: 1
+      :lines: 2
+    - :name: WritingDecorator#updated_at_date_simple
+      :complexity: 1
+      :lines: 2
+  - :name: Tag
+    :complexity: 3
+    :lines: 17
+    :defs:
+    - :name: Tag#articles
+      :complexity: 1
+      :lines: 2
+    - :name: Tag#self.create_many_tags
+      :complexity: 2
+      :lines: 4
+  - :name: FormatterFactory
+    :complexity: 3
+    :lines: 12
+    :defs:
+    - :name: FormatterFactory#self.create
+      :complexity: 3
+      :lines: 9
+  - :name: Ability
+    :complexity: 2
+    :lines: 42
+    :defs:
+    - :name: Ability#initialize
+      :complexity: 2
+      :lines: 8
+  - :name: WritingController
+    :complexity: 2
+    :lines: 9
+    :defs:
+    - :name: WritingController#index
+      :complexity: 1
+      :lines: 2
+    - :name: WritingController#prefix
+      :complexity: 1
+      :lines: 3
+  - :name: Writing
+    :complexity: 2
+    :lines: 29
+    :defs:
+    - :name: Writing#self.find_by_prefix
+      :complexity: 2
+      :lines: 7
+  - :name: MoniwikiFormatter
+    :complexity: 1
+    :lines: 4
+    :defs:
+    - :name: MoniwikiFormatter#convert
+      :complexity: 1
+      :lines: 2
+  - :name: Formatter
+    :complexity: 1
+    :lines: 10
+    :defs:
+    - :name: Formatter#articles
+      :complexity: 1
+      :lines: 2
+  - :name: TextFormatter
+    :complexity: 1
+    :lines: 4
+    :defs:
+    - :name: TextFormatter#convert
+      :complexity: 1
+      :lines: 2
+  - :name: MainController
+    :complexity: 1
+    :lines: 3
+    :defs:
+    - :name: MainController#index
+      :complexity: 1
+      :lines: 1
+  - :name: String
+    :complexity: 1
+    :lines: 4
+    :defs:
+    - :name: String#to_moni
+      :complexity: 1
+      :lines: 2
+  - :name: MarkdownFormatter
+    :complexity: 1
+    :lines: 9
+    :defs:
+    - :name: MarkdownFormatter#convert
+      :complexity: 1
+      :lines: 7
+  - :name: BaseFormatter
+    :complexity: 1
+    :lines: 6
+    :defs:
+    - :name: BaseFormatter#corvent
+      :complexity: 1
+      :lines: 2
+  - :name: Category
+    :complexity: 1
+    :lines: 15
+    :defs:
+    - :name: Category#articles
+      :complexity: 1
+      :lines: 2
+  - :name: Prefix
+    :complexity: 0
+    :lines: 10
+  - :name: Tagging
+    :complexity: 0
+    :lines: 15
+  - :name: MainHelper
+    :complexity: 0
+    :lines: 1
+  - :name: WritingHelper
+    :complexity: 0
+    :lines: 1
+  - :name: ApplicationController
+    :complexity: 0
+    :lines: 2
+  - :name: ApplicationHelper
+    :complexity: 0
+    :lines: 1
+  - :name: WritingsDecorator
+    :complexity: 0
+    :lines: 2
+  - :name: User
+    :complexity: 0
+    :lines: 18
+  - :name: Role
+    :complexity: 0
+    :lines: 5
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: Migraiton
+    :complexity: 0
+    :lines: 2
+  - :name: Document
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: Article
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  :methods:
+  - :name: WritingsController#index
+    :complexity: 3
+    :lines: 10
+  - :name: WritingsController#writings
+    :complexity: 3
+    :lines: 14
+  - :name: FormatterFactory#self.create
+    :complexity: 3
+    :lines: 9
+  - :name: Plugin#self.miniblog
+    :complexity: 2
+    :lines: 12
+  - :name: Tag#self.create_many_tags
+    :complexity: 2
+    :lines: 4
+  - :name: Plugin#self.attachment
+    :complexity: 2
+    :lines: 15
+  - :name: Ability#initialize
+    :complexity: 2
+    :lines: 8
+  - :name: Writing#self.find_by_prefix
+    :complexity: 2
+    :lines: 7
+  - :name: WritingDecorator#created_at_time
+    :complexity: 1
+    :lines: 2
+  - :name: WritingController#prefix
+    :complexity: 1
+    :lines: 3
+  - :name: WritingController#index
+    :complexity: 1
+    :lines: 2
+  - :name: TextFormatter#convert
+    :complexity: 1
+    :lines: 2
+  - :name: BaseFormatter#corvent
+    :complexity: 1
+    :lines: 2
+  - :name: Category#articles
+    :complexity: 1
+    :lines: 2
+  - :name: Tag#articles
+    :complexity: 1
+    :lines: 2
+  - :name: WritingDecorator#updated_at_date_simple
+    :complexity: 1
+    :lines: 2
+  - :name: WritingDecorator#updated_at_date
+    :complexity: 1
+    :lines: 2
+  - :name: WritingDecorator#updated_at_time
+    :complexity: 1
+    :lines: 2
+  - :name: WritingDecorator#created_at_date_simple
+    :complexity: 1
+    :lines: 2
+  - :name: WritingDecorator#created_at_date
+    :complexity: 1
+    :lines: 2
+  - :name: Formatter#articles
+    :complexity: 1
+    :lines: 2
+  - :name: WritingDecorator#formatted_text
+    :complexity: 1
+    :lines: 3
+  - :name: WritingDecorator#title_link
+    :complexity: 1
+    :lines: 2
+  - :name: Plugin#self.footnotes_init
+    :complexity: 1
+    :lines: 3
+  - :name: Plugin#self.footnotes
+    :complexity: 1
+    :lines: 2
+  - :name: MoniwikiFormatter#convert
+    :complexity: 1
+    :lines: 2
+  - :name: Plugin#self.br
+    :complexity: 1
+    :lines: 2
+  - :name: Plugin#self.html
+    :complexity: 1
+    :lines: 2
+  - :name: Plugin#self.footnote
+    :complexity: 1
+    :lines: 7
+  - :name: MarkdownFormatter#convert
+    :complexity: 1
+    :lines: 7
+  - :name: Plugin#self.youtube
+    :complexity: 1
+    :lines: 8
+  - :name: Plugin#self.cross
+    :complexity: 1
+    :lines: 2
+  - :name: String#to_moni
+    :complexity: 1
+    :lines: 2
+  - :name: WritingsController#init_filter
+    :complexity: 1
+    :lines: 5
+  - :name: WritingsController#set_order
+    :complexity: 1
+    :lines: 4
+  - :name: WritingsController#set_per
+    :complexity: 1
+    :lines: 3
+  - :name: WritingsController#destroy
+    :complexity: 1
+    :lines: 1
+  - :name: WritingsController#edit
+    :complexity: 1
+    :lines: 1
+  - :name: WritingsController#create
+    :complexity: 1
+    :lines: 1
+  - :name: WritingsController#new
+    :complexity: 1
+    :lines: 1
+  - :name: WritingsController#show
+    :complexity: 1
+    :lines: 2
+  - :name: MainController#index
+    :complexity: 1
+    :lines: 1
+:hotspots:
+  :files:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:2
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1426109021942286637
+    :details:
+      :flog: complexity is 25.5
+      :saikuro: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:49
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 2737388426382830766
+    :details:
+      :flog: complexity is 11.8
+      :saikuro: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:9
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 3291069084564680385
+    :details:
+      :flog: complexity is 8.9
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:5
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 268806889608576740
+    :details:
+      :flog: complexity is 8.8
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/writing.rb:22
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 2370007269101817175
+    :details:
+      :flog: complexity is 9.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:35
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 4520345976230913508
+    :details:
+      :flog: complexity is 7.7
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter_factory.rb:3
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 3370682523939864055
+    :details:
+      :flog: complexity is 4.7
+      :saikuro: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/ability.rb:4
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2096447667607373242
+    :details:
+      :flog: complexity is 5.7
+      :saikuro: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:14
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2059308588671839482
+    :details:
+      :flog: complexity is 5.3
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/moniwiki_formatter.rb:2
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2306365806644646914
+    :details:
+      :flog: complexity is 5.2
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:41
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2296974375186611940
+    :details:
+      :flog: complexity is 5.0
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:30
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1999131391635708807
+    :details:
+      :flog: complexity is 4.3
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:35
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1196421936985319808
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:31
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -4475957275064301047
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:27
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 880473182625284167
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:23
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2634405816703509591
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:18
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -222226772795527751
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:14
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1052644351926658838
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/markdown_formatter.rb:2
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -958957936321319064
+    :details:
+      :flog: complexity is 3.4
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/tag.rb:9
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -3366196328538659646
+    :details:
+      :flog: complexity is 2.2
+      :saikuro: average complexity is 1.5
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/tag.rb:13
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -405250852631420681
+    :details:
+      :flog: complexity is 3.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/writing.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -475245491805010958
+    :details:
+      :churn: detected high level of churn (changed 13 times)
+      :saikuro: complexity is 2.0
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter.rb:8
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1234045720611336693
+    :details:
+      :flog: complexity is 2.2
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/category.rb:13
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1813741545118676304
+    :details:
+      :flog: complexity is 2.2
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -1486235298669154192
+    :details:
+      :churn: detected high level of churn (changed 17 times)
+      :saikuro: average complexity is 1.0
+      :reek: found 13 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/base_formatter.rb:4
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1520092208506547951
+    :details:
+      :flog: complexity is 1.0
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/main_controller.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2051854159587506133
+    :details:
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1993866467347863014
+    :details:
+      :saikuro: average complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/text_formatter.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -3164487702433014846
+    :details:
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/string.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 923575495806063563
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writing_controller.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -656495412733712449
+    :details:
+      :saikuro: average complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/markdown_formatter.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -803197538674197530
+    :details:
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -513619280065444729
+    :details:
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/moniwiki_formatter.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2096524718005186351
+    :details:
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/base_formatter.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -4504244757736828212
+    :details:
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter_factory.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2064569228752546550
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/ability.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2218616367930717428
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/category.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -1918529880146968413
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/document.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 1250473405434079920
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: config/routes.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 2937684259734491343
+    :details:
+      :churn: detected high level of churn (changed 10 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/models/writing_spec.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -209123874384948935
+    :details:
+      :churn: detected high level of churn (changed 10 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: Gemfile.lock
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -1955142988963674721
+    :details:
+      :churn: detected high level of churn (changed 13 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/tasks/mysql2pg.rake
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2124676191471850422
+    :details:
+      :churn: detected high level of churn (changed 12 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2252613400254388867
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: Gemfile
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -4095085171557110618
+    :details:
+      :churn: detected high level of churn (changed 14 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/controllers/writings_controller_spec.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 581452886964949265
+    :details:
+      :churn: detected high level of churn (changed 16 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/article.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 2048206247077303034
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writings_decorator.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 3247245947636354050
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/migraiton.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -3582652854159691090
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/prefix.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 4277481935492853821
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/role.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -535517262914027423
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/tag.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 3878468308953956829
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/tagging.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 3757765777037605455
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/user.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 2436990602209162421
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/application_controller.rb
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 571727134809695751
+    :details:
+      :reek: found 1 code smells
+  :classes:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Writing
+      method_name: 
+      simple_method_name: ''
+      hash: -3314367959582938767
+    :details:
+      :flog: average complexity is 11.5
+      :saikuro: complexity is 2.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:2
+      class_name: WritingsController
+      method_name: 
+      simple_method_name: ''
+      hash: 3661746068953691098
+    :details:
+      :flog: average complexity is 8.6
+      :saikuro: average complexity is 1.4
+      :reek: found 13 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Prefix
+      method_name: 
+      simple_method_name: ''
+      hash: 2938638671710866955
+    :details:
+      :flog: complexity is 9.2
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter_factory.rb:3
+      class_name: FormatterFactory
+      method_name: 
+      simple_method_name: ''
+      hash: 2600254713514407295
+    :details:
+      :flog: complexity is 4.7
+      :saikuro: complexity is 3.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Tagging
+      method_name: 
+      simple_method_name: ''
+      hash: -768978074834242678
+    :details:
+      :flog: complexity is 8.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/moniwiki_formatter.rb:2
+      class_name: MoniwikiFormatter
+      method_name: 
+      simple_method_name: ''
+      hash: 1397676512363857476
+    :details:
+      :flog: complexity is 5.2
+      :saikuro: complexity is 1.0
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: WritingDecorator
+      method_name: 
+      simple_method_name: ''
+      hash: -4525858679942619625
+    :details:
+      :flog: average complexity is 4.5
+      :saikuro: average complexity is 1.0
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Ability
+      method_name: 
+      simple_method_name: ''
+      hash: -554896318204859699
+    :details:
+      :flog: average complexity is 3.8
+      :saikuro: complexity is 2.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Category
+      method_name: 
+      simple_method_name: ''
+      hash: -3809217271647955420
+    :details:
+      :flog: average complexity is 4.1
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Tag
+      method_name: 
+      simple_method_name: ''
+      hash: -1220337882117070253
+    :details:
+      :flog: average complexity is 3.5
+      :saikuro: average complexity is 1.5
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/markdown_formatter.rb:2
+      class_name: MarkdownFormatter
+      method_name: 
+      simple_method_name: ''
+      hash: -3331377044641007034
+    :details:
+      :flog: complexity is 3.4
+      :saikuro: complexity is 1.0
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: User
+      method_name: 
+      simple_method_name: ''
+      hash: 31803509306506827
+    :details:
+      :flog: complexity is 5.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Formatter
+      method_name: 
+      simple_method_name: ''
+      hash: 1208312042971216536
+    :details:
+      :flog: average complexity is 3.1
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Article
+      method_name: 
+      simple_method_name: ''
+      hash: 2565346858516987605
+    :details:
+      :flog: complexity is 3.7
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Document
+      method_name: 
+      simple_method_name: ''
+      hash: -1816345272168278718
+    :details:
+      :flog: complexity is 3.7
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: BaseFormatter
+      method_name: 
+      simple_method_name: ''
+      hash: 2201725411833354963
+    :details:
+      :flog: average complexity is 1.5
+      :saikuro: complexity is 1.0
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Role
+      method_name: 
+      simple_method_name: ''
+      hash: -1976092259452138635
+    :details:
+      :flog: complexity is 3.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: WritingsDecorator
+      method_name: 
+      simple_method_name: ''
+      hash: 2899024274747643896
+    :details:
+      :flog: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: ApplicationController
+      method_name: 
+      simple_method_name: ''
+      hash: -3942396421034798666
+    :details:
+      :flog: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Migraiton
+      method_name: 
+      simple_method_name: ''
+      hash: -451267941709759136
+    :details:
+      :flog: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/main_controller.rb
+      class_name: MainController
+      method_name: 
+      simple_method_name: ''
+      hash: 3272279192285318666
+    :details:
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: 
+      simple_method_name: ''
+      hash: -1493488809662961460
+    :details:
+      :saikuro: average complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/text_formatter.rb
+      class_name: TextFormatter
+      method_name: 
+      simple_method_name: ''
+      hash: -1099057311781052076
+    :details:
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/string.rb
+      class_name: String
+      method_name: 
+      simple_method_name: ''
+      hash: -871338021019322429
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writing_controller.rb
+      class_name: WritingController
+      method_name: 
+      simple_method_name: ''
+      hash: 1849771075848378318
+    :details:
+      :saikuro: average complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/writing.rb
+      class_name: Writing#self
+      method_name: 
+      simple_method_name: ''
+      hash: -1440348220366093240
+    :details:
+      :reek: found 1 code smells
+  :methods:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:2
+      class_name: WritingsController
+      method_name: WritingsController#index
+      simple_method_name: '#index'
+      hash: 493213239595358831
+    :details:
+      :flog: complexity is 25.5
+      :saikuro: complexity is 3.0
+      :reek: found 5 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:49
+      class_name: WritingsController
+      method_name: WritingsController#writings
+      simple_method_name: '#writings'
+      hash: 4052281312602425532
+    :details:
+      :flog: complexity is 11.8
+      :saikuro: complexity is 3.0
+      :reek: found 4 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Writing
+      method_name: Writing#none
+      simple_method_name: '#none'
+      hash: 4249541596997303153
+    :details:
+      :flog: complexity is 13.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:5
+      class_name: WritingDecorator
+      method_name: WritingDecorator#title_link
+      simple_method_name: '#title_link'
+      hash: -930487079021513048
+    :details:
+      :flog: complexity is 8.8
+      :saikuro: complexity is 1.0
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:9
+      class_name: WritingDecorator
+      method_name: WritingDecorator#formatted_text
+      simple_method_name: '#formatted_text'
+      hash: -2050631252827354109
+    :details:
+      :flog: complexity is 8.9
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/writing.rb:22
+      class_name: Writing
+      method_name: Writing#find_by_prefix
+      simple_method_name: '#find_by_prefix'
+      hash: -4115808854444465471
+    :details:
+      :flog: complexity is 9.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:35
+      class_name: WritingsController
+      method_name: WritingsController#set_order
+      simple_method_name: '#set_order'
+      hash: 752656694055405953
+    :details:
+      :flog: complexity is 7.7
+      :saikuro: complexity is 1.0
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Prefix
+      method_name: Prefix#none
+      simple_method_name: '#none'
+      hash: 775244796202074915
+    :details:
+      :flog: complexity is 9.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Tagging
+      method_name: Tagging#none
+      simple_method_name: '#none'
+      hash: 1943259638543884303
+    :details:
+      :flog: complexity is 8.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/ability.rb:4
+      class_name: Ability
+      method_name: Ability#initialize
+      simple_method_name: '#initialize'
+      hash: -3343877601292441269
+    :details:
+      :flog: complexity is 5.7
+      :saikuro: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:14
+      class_name: WritingsController
+      method_name: WritingsController#show
+      simple_method_name: '#show'
+      hash: -2577396866713737278
+    :details:
+      :flog: complexity is 5.3
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/moniwiki_formatter.rb:2
+      class_name: MoniwikiFormatter
+      method_name: MoniwikiFormatter#convert
+      simple_method_name: '#convert'
+      hash: 2746602616850858515
+    :details:
+      :flog: complexity is 5.2
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:41
+      class_name: WritingsController
+      method_name: WritingsController#init_filter
+      simple_method_name: '#init_filter'
+      hash: 4372573265255537768
+    :details:
+      :flog: complexity is 5.0
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Category
+      method_name: Category#none
+      simple_method_name: '#none'
+      hash: -2221585829470044998
+    :details:
+      :flog: complexity is 6.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb:30
+      class_name: WritingsController
+      method_name: WritingsController#set_per
+      simple_method_name: '#set_per'
+      hash: 931029941968772277
+    :details:
+      :flog: complexity is 4.3
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: User
+      method_name: User#none
+      simple_method_name: '#none'
+      hash: 3109029711154827900
+    :details:
+      :flog: complexity is 5.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Tag
+      method_name: Tag#none
+      simple_method_name: '#none'
+      hash: 2656726465295626009
+    :details:
+      :flog: complexity is 5.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/markdown_formatter.rb:2
+      class_name: MarkdownFormatter
+      method_name: MarkdownFormatter#convert
+      simple_method_name: '#convert'
+      hash: -3265702476669279068
+    :details:
+      :flog: complexity is 3.4
+      :saikuro: complexity is 1.0
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter_factory.rb:3
+      class_name: FormatterFactory
+      method_name: FormatterFactory#create
+      simple_method_name: '#create'
+      hash: -4419795782345743721
+    :details:
+      :flog: complexity is 4.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:23
+      class_name: WritingDecorator
+      method_name: WritingDecorator#created_at_date_simple
+      simple_method_name: '#created_at_date_simple'
+      hash: 3003578654092827285
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:27
+      class_name: WritingDecorator
+      method_name: WritingDecorator#updated_at_time
+      simple_method_name: '#updated_at_time'
+      hash: 1978939386676983015
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:31
+      class_name: WritingDecorator
+      method_name: WritingDecorator#updated_at_date
+      simple_method_name: '#updated_at_date'
+      hash: 3040730263263244366
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:35
+      class_name: WritingDecorator
+      method_name: WritingDecorator#updated_at_date_simple
+      simple_method_name: '#updated_at_date_simple'
+      hash: 3462020407503529097
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:18
+      class_name: WritingDecorator
+      method_name: WritingDecorator#created_at_date
+      simple_method_name: '#created_at_date'
+      hash: 2990171878636384582
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/decorators/writing_decorator.rb:14
+      class_name: WritingDecorator
+      method_name: WritingDecorator#created_at_time
+      simple_method_name: '#created_at_time'
+      hash: -2381603591144168055
+    :details:
+      :flog: complexity is 3.6
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Formatter
+      method_name: Formatter#none
+      simple_method_name: '#none'
+      hash: 2142485331386244180
+    :details:
+      :flog: complexity is 4.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Document
+      method_name: Document#none
+      simple_method_name: '#none'
+      hash: 1278626484952700185
+    :details:
+      :flog: complexity is 3.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Article
+      method_name: Article#none
+      simple_method_name: '#none'
+      hash: 2873493001177446013
+    :details:
+      :flog: complexity is 3.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/tag.rb:13
+      class_name: Tag
+      method_name: Tag#create_many_tags
+      simple_method_name: '#create_many_tags'
+      hash: 4358159433382348552
+    :details:
+      :flog: complexity is 3.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter.rb:8
+      class_name: Formatter
+      method_name: Formatter#articles
+      simple_method_name: '#articles'
+      hash: 1646779693422486151
+    :details:
+      :flog: complexity is 2.2
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/tag.rb:9
+      class_name: Tag
+      method_name: Tag#articles
+      simple_method_name: '#articles'
+      hash: 1852507237206090658
+    :details:
+      :flog: complexity is 2.2
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/category.rb:13
+      class_name: Category
+      method_name: Category#articles
+      simple_method_name: '#articles'
+      hash: -4108086101412308907
+    :details:
+      :flog: complexity is 2.2
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Role
+      method_name: Role#none
+      simple_method_name: '#none'
+      hash: -1973107016916827218
+    :details:
+      :flog: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/formatter_factory.rb:3
+      class_name: FormatterFactory
+      method_name: FormatterFactory#self.create
+      simple_method_name: '#self.create'
+      hash: 1685698963666600798
+    :details:
+      :saikuro: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/base_formatter.rb:4
+      class_name: BaseFormatter
+      method_name: BaseFormatter#corvent
+      simple_method_name: '#corvent'
+      hash: -2812191359050907401
+    :details:
+      :flog: complexity is 1.0
+      :saikuro: complexity is 1.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/writing.rb
+      class_name: Writing
+      method_name: Writing#self.find_by_prefix
+      simple_method_name: '#self.find_by_prefix'
+      hash: 1436347074028077795
+    :details:
+      :saikuro: complexity is 2.0
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: BaseFormatter
+      method_name: BaseFormatter#none
+      simple_method_name: '#none'
+      hash: -1768484391993247897
+    :details:
+      :flog: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Ability
+      method_name: Ability#none
+      simple_method_name: '#none'
+      hash: 3826069701302415906
+    :details:
+      :flog: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/tag.rb:9
+      class_name: Tag
+      method_name: Tag#self.create_many_tags
+      simple_method_name: '#self.create_many_tags'
+      hash: 693909264767774693
+    :details:
+      :saikuro: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.miniblog
+      simple_method_name: '#self.miniblog'
+      hash: -2937188521722793040
+    :details:
+      :saikuro: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.attachment
+      simple_method_name: '#self.attachment'
+      hash: 1437060297096587580
+    :details:
+      :saikuro: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb
+      class_name: WritingsController
+      method_name: WritingsController#edit
+      simple_method_name: '#edit'
+      hash: 3408389437291697608
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb
+      class_name: WritingsController
+      method_name: WritingsController#create
+      simple_method_name: '#create'
+      hash: 2256756401674241998
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb
+      class_name: WritingsController
+      method_name: WritingsController#new
+      simple_method_name: '#new'
+      hash: 592011844198355750
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writings_controller.rb
+      class_name: WritingsController
+      method_name: WritingsController#destroy
+      simple_method_name: '#destroy'
+      hash: 3142716782256239637
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: ApplicationController
+      method_name: ApplicationController#none
+      simple_method_name: '#none'
+      hash: 3986977673771089327
+    :details:
+      :flog: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: WritingsDecorator
+      method_name: WritingsDecorator#none
+      simple_method_name: '#none'
+      hash: -1644385172349612376
+    :details:
+      :flog: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.html
+      simple_method_name: '#self.html'
+      hash: 1312884827288860541
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.br
+      simple_method_name: '#self.br'
+      hash: 1387940290454455746
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.footnotes
+      simple_method_name: '#self.footnotes'
+      hash: -2378912340269759008
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.footnote
+      simple_method_name: '#self.footnote'
+      hash: 3659980109735974465
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.footnotes_init
+      simple_method_name: '#self.footnotes_init'
+      hash: 1491912545021731944
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.youtube
+      simple_method_name: '#self.youtube'
+      hash: 3723132591473053902
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/plugin.rb
+      class_name: Plugin
+      method_name: Plugin#self.cross
+      simple_method_name: '#self.cross'
+      hash: 1072532612954874345
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: Migraiton
+      method_name: Migraiton#none
+      simple_method_name: '#none'
+      hash: -583877003000652005
+    :details:
+      :flog: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: WritingsController
+      method_name: WritingsController#none
+      simple_method_name: '#none'
+      hash: 86103190101381428
+    :details:
+      :flog: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writing_controller.rb
+      class_name: WritingController
+      method_name: WritingController#prefix
+      simple_method_name: '#prefix'
+      hash: 637298963082990286
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/writing_controller.rb
+      class_name: WritingController
+      method_name: WritingController#index
+      simple_method_name: '#index'
+      hash: -3190496578338117973
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      class_name: WritingDecorator
+      method_name: WritingDecorator#none
+      simple_method_name: '#none'
+      hash: -3027186296326778886
+    :details:
+      :flog: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/models/text_formatter.rb
+      class_name: TextFormatter
+      method_name: TextFormatter#convert
+      simple_method_name: '#convert'
+      hash: -2929701150868446724
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/moni_formatter/lib/string.rb
+      class_name: String
+      method_name: String#to_moni
+      simple_method_name: '#to_moni'
+      hash: 2212022015604643439
+    :details:
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: app/controllers/main_controller.rb
+      class_name: MainController
+      method_name: MainController#index
+      simple_method_name: '#index'
+      hash: -4429348572508864548
+    :details:
+      :saikuro: complexity is 1.0

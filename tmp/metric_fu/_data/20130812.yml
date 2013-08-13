@@ -1,0 +1,336 @@
+---
+:cane:
+  :total_violations: 10
+  :violations:
+    :line_style:
+    - :line: lib/metric_fu_report.rb:7
+      :description: Line contains trailing whitespace
+    - :line: lib/metric_fu_report.rb:19
+      :description: Line contains trailing whitespace
+    - :line: lib/metric_fu_report2.rb:7
+      :description: Line contains trailing whitespace
+    - :line: lib/metric_fu_report2.rb:19
+      :description: Line contains trailing whitespace
+    - :line: lib/metric_fu_report3.rb:7
+      :description: Line contains trailing whitespace
+    - :line: lib/metric_fu_report3.rb:19
+      :description: Line contains trailing whitespace
+    :documentation:
+    - :description: No README found
+    :comment:
+    - :line: lib/metric_fu_report.rb:5
+      :class_name: MetricFuReport
+    - :line: lib/metric_fu_report2.rb:5
+      :class_name: MetricFuReport
+    - :line: lib/metric_fu_report3.rb:5
+      :class_name: MetricFuReport
+:churn: {}
+:flay:
+  :total_score: '297'
+  :matches:
+  - :reason: 1) IDENTICAL code found in :class (mass*3 = 297)
+    :matches:
+    - :name: lib/metric_fu_report.rb
+      :line: '5'
+    - :name: lib/metric_fu_report2.rb
+      :line: '5'
+    - :name: lib/metric_fu_report3.rb
+      :line: '5'
+:flog:
+  :total: 53.5357070705186
+  :average: 13.38392676762965
+  :method_containers:
+  - :name: MetricFuReport
+    :path: lib/metric_fu_report3.rb
+    :total_score: 32.87051895136516
+    :highest_score: 24.90361419553395
+    :average_score: 10.956839650455054
+    :methods:
+      MetricFuReport#none:
+        :operators:
+          :attr_accessor: 3.3000000000000003
+        :score: 3.3000000000000003
+        :path: 
+      MetricFuReport#initialize:
+        :operators:
+          :assignment: 3.3000000000000003
+          :load_file: 3.3000000000000003
+        :score: 4.666904755831214
+        :path: lib/metric_fu_report3.rb:8
+      MetricFuReport#classes:
+        :operators:
+          :assignment: 3.3000000000000003
+          :branch: 6.900000000000001
+          :[]: 16.5
+          :each: 3.3000000000000003
+          :<<: 3.900000000000001
+        :score: 24.90361419553395
+        :path: lib/metric_fu_report3.rb:12
+  - :name: main
+    :path: ''
+    :total_score: 20.66518811915343
+    :highest_score: 20.66518811915343
+    :average_score: 20.66518811915343
+    :methods:
+      main#none:
+        :operators:
+          :require: 9.899999999999999
+          :assignment: 3.3000000000000003
+          :new: 3.3000000000000003
+          :classes: 3.9000000000000004
+          :puts: 3.3000000000000003
+        :score: 20.66518811915343
+        :path: 
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: MetricFuReport
+      :complexity: 4
+      :lines: 15
+      :methods:
+      - :name: MetricFuReport#classes
+        :complexity: 3
+        :lines: 6
+      - :name: MetricFuReport#initialize
+        :complexity: 1
+        :lines: 2
+    :filename: lib/metric_fu_report3.rb
+  - :classes:
+    - :class_name: MetricFuReport
+      :complexity: 4
+      :lines: 15
+      :methods:
+      - :name: MetricFuReport#classes
+        :complexity: 3
+        :lines: 6
+      - :name: MetricFuReport#initialize
+        :complexity: 1
+        :lines: 2
+    :filename: lib/metric_fu_report2.rb
+  - :classes:
+    - :class_name: MetricFuReport
+      :complexity: 4
+      :lines: 15
+      :methods:
+      - :name: MetricFuReport#classes
+        :complexity: 3
+        :lines: 6
+      - :name: MetricFuReport#initialize
+        :complexity: 1
+        :lines: 2
+    :filename: lib/metric_fu_report.rb
+  :classes:
+  - :name: MetricFuReport
+    :complexity: 4
+    :lines: 15
+    :defs:
+    - :name: MetricFuReport#initialize
+      :complexity: 1
+      :lines: 2
+    - :name: MetricFuReport#classes
+      :complexity: 3
+      :lines: 6
+  - :name: MetricFuReport
+    :complexity: 4
+    :lines: 15
+    :defs:
+    - :name: MetricFuReport#initialize
+      :complexity: 1
+      :lines: 2
+    - :name: MetricFuReport#classes
+      :complexity: 3
+      :lines: 6
+  - :name: MetricFuReport
+    :complexity: 4
+    :lines: 15
+    :defs:
+    - :name: MetricFuReport#initialize
+      :complexity: 1
+      :lines: 2
+    - :name: MetricFuReport#classes
+      :complexity: 3
+      :lines: 6
+  :methods:
+  - :name: MetricFuReport#classes
+    :complexity: 3
+    :lines: 6
+  - :name: MetricFuReport#classes
+    :complexity: 3
+    :lines: 6
+  - :name: MetricFuReport#classes
+    :complexity: 3
+    :lines: 6
+  - :name: MetricFuReport#initialize
+    :complexity: 1
+    :lines: 2
+  - :name: MetricFuReport#initialize
+    :complexity: 1
+    :lines: 2
+  - :name: MetricFuReport#initialize
+    :complexity: 1
+    :lines: 2
+:reek:
+  :matches:
+  - :file_path: lib/metric_fu_report.rb
+    :code_smells:
+    - :method: MetricFuReport
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: MetricFuReport#classes
+      :message: calls cl[:name] twice
+      :type: DuplicateMethodCall
+    - :method: MetricFuReport#classes
+      :message: refers to cl more than self
+      :type: FeatureEnvy
+  - :file_path: lib/metric_fu_report2.rb
+    :code_smells:
+    - :method: MetricFuReport
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: MetricFuReport#classes
+      :message: calls cl[:name] twice
+      :type: DuplicateMethodCall
+    - :method: MetricFuReport#classes
+      :message: refers to cl more than self
+      :type: FeatureEnvy
+  - :file_path: lib/metric_fu_report3.rb
+    :code_smells:
+    - :method: MetricFuReport
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: MetricFuReport#classes
+      :message: calls cl[:name] twice
+      :type: DuplicateMethodCall
+    - :method: MetricFuReport#classes
+      :message: refers to cl more than self
+      :type: FeatureEnvy
+:roodi:
+  :total:
+  - Found 0 errors.
+  :problems: []
+:hotspots:
+  :files:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/metric_fu_report3.rb:12
+      file_name: lib/metric_fu_report3.rb
+      line_number: '12'
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -2986499140370697095
+    :details:
+      :flog: complexity is 24.9
+      :saikuro: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/metric_fu_report3.rb:8
+      file_name: lib/metric_fu_report3.rb
+      line_number: '8'
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -3721000367900693580
+    :details:
+      :flog: complexity is 4.7
+      :saikuro: complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/metric_fu_report.rb
+      file_name: lib/metric_fu_report.rb
+      line_number: 
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 910227754749434099
+    :details:
+      :flay: found 1 code duplications
+      :saikuro: average complexity is 2.0
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/metric_fu_report2.rb
+      file_name: lib/metric_fu_report2.rb
+      line_number: 
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: -3398102082357514195
+    :details:
+      :flay: found 1 code duplications
+      :saikuro: average complexity is 2.0
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/metric_fu_report3.rb
+      file_name: lib/metric_fu_report3.rb
+      line_number: 
+      class_name: 
+      method_name: 
+      simple_method_name: ''
+      hash: 3815855023647455694
+    :details:
+      :flay: found 1 code duplications
+      :reek: found 3 code smells
+  :classes:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      file_name: 
+      line_number: 
+      class_name: main
+      method_name: 
+      simple_method_name: ''
+      hash: -606145600058787743
+    :details:
+      :flog: complexity is 20.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      file_name: 
+      line_number: 
+      class_name: MetricFuReport
+      method_name: 
+      simple_method_name: ''
+      hash: -506592073488461534
+    :details:
+      :flog: average complexity is 11.0
+      :saikuro: average complexity is 2.0
+      :reek: found 9 code smells
+  :methods:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/metric_fu_report3.rb:12
+      file_name: lib/metric_fu_report3.rb
+      line_number: '12'
+      class_name: MetricFuReport
+      method_name: MetricFuReport#classes
+      simple_method_name: '#classes'
+      hash: 2713629498875456400
+    :details:
+      :flog: complexity is 24.9
+      :saikuro: average complexity is 3.0
+      :reek: found 6 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      file_name: 
+      line_number: 
+      class_name: main
+      method_name: main#none
+      simple_method_name: '#none'
+      hash: 3067363317447481103
+    :details:
+      :flog: complexity is 20.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/metric_fu_report3.rb:8
+      file_name: lib/metric_fu_report3.rb
+      line_number: '8'
+      class_name: MetricFuReport
+      method_name: MetricFuReport#initialize
+      simple_method_name: '#initialize'
+      hash: -1404635299482205027
+    :details:
+      :flog: complexity is 4.7
+      :saikuro: average complexity is 1.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: 
+      file_name: 
+      line_number: 
+      class_name: MetricFuReport
+      method_name: MetricFuReport#none
+      simple_method_name: '#none'
+      hash: 2488319201620220116
+    :details:
+      :flog: complexity is 3.3
