@@ -1,12 +1,11 @@
-require 'psych'
-require 'metric_fu'
-require 'pp'
+require File.join(__dir__, 'boot')
+require File.join(__dir__, 'metric_fu_report_parser/version')
 
-class MetricFuReport
+class MetricFuReportParser
   attr_accessor :yaml
   
-  def initialize
-    @yaml = Psych.load_file("data/metric_fu_sample.yml")
+  def initialize(target: "tmp/metric_fu_sample.yml")
+    @yaml = ::Psych.load_file(target)
   end
 
   def classes
@@ -16,10 +15,6 @@ class MetricFuReport
     end
     names
   end
-  
 end
-
-m = MetricFuReport.new
-puts m.classes
 
 

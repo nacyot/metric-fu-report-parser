@@ -1,0 +1,107 @@
+PATH
+  remote: .
+  specs:
+    metric_fu_report_parser (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (4.0.0)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    arrayfields (4.9.0)
+    atomic (1.1.13)
+    awesome_print (1.1.0)
+    bluff (0.1.0)
+    cane (2.5.2)
+      parallel
+    chronic (0.9.1)
+    churn (0.0.29)
+      chronic (>= 0.2.3)
+      hirb
+      json_pure
+      main
+      ruby_parser (~> 3.0)
+      sexp_processor (~> 4.1)
+    code_analyzer (0.4.0)
+      sexp_processor
+    code_metrics (0.1.0)
+    coderay (1.0.9)
+    colored (1.2)
+    erubis (2.7.0)
+    fattr (2.2.1)
+    flay (2.0.1)
+      ruby_parser (~> 3.0)
+      sexp_processor (~> 4.0)
+    flog (4.1.1)
+      ruby_parser (~> 3.1, > 3.1.0)
+      sexp_processor (~> 4.0)
+    hirb (0.7.1)
+    i18n (0.6.5)
+    json_pure (1.8.0)
+    main (5.2.0)
+      arrayfields (>= 4.7.4)
+      chronic (>= 0.6.2)
+      fattr (>= 2.2.0)
+      map (>= 5.1.0)
+    map (6.5.1)
+    metric_fu (4.4.0)
+      bluff
+      cane (~> 2.5.2)
+      churn (~> 0.0.28)
+      code_metrics (~> 0.1)
+      coderay
+      flay (~> 2.0.1)
+      flog (~> 4.1.1)
+      metric_fu-Saikuro (>= 1.1.1.0)
+      metric_fu-roodi (>= 2.2.1)
+      multi_json
+      rails_best_practices (~> 1.14, >= 1.14.1)
+      redcard
+      reek (~> 1.3.1)
+    metric_fu-Saikuro (1.1.1.0)
+    metric_fu-roodi (2.2.2)
+      ruby_parser
+    minitest (4.7.5)
+    multi_json (1.7.9)
+    parallel (0.7.1)
+    psych (2.0.0)
+    rails_best_practices (1.14.1)
+      activesupport
+      awesome_print
+      code_analyzer (>= 0.4.0)
+      colored
+      erubis
+      i18n
+      require_all
+      ruby-progressbar
+    rake (10.1.0)
+    redcard (1.1.0)
+    reek (1.3.2)
+      ruby2ruby (~> 2.0.2)
+      ruby_parser (~> 3.1.1)
+      sexp_processor
+    require_all (1.2.1)
+    ruby-progressbar (1.2.0)
+    ruby2ruby (2.0.6)
+      ruby_parser (~> 3.1)
+      sexp_processor (~> 4.0)
+    ruby_parser (3.1.3)
+      sexp_processor (~> 4.1)
+    sexp_processor (4.2.1)
+    thread_safe (0.1.2)
+      atomic
+    tzinfo (0.3.37)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.3)
+  metric_fu
+  metric_fu_report_parser!
+  psych
+  rake
