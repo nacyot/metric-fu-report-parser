@@ -12,15 +12,15 @@ module MetricFuReport
       @churn = []
     end
 
-    def parse_file_churns
+    def parse_files_churn
       @yaml[:changes]
     end
     
-    def parse_class_churns
+    def parse_classes_churn
       @yaml[:class_churn]
     end
 
-    def parse_method_churns
+    def parse_methods_churn
       @yaml[:method_churn]
     end
   end
