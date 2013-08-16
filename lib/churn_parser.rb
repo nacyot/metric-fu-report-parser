@@ -1,7 +1,3 @@
-require 'psych'
-require 'metric_fu'
-require 'pp'
-
 module MetricFuReport
   class ChurnParser
     attr_accessor :yaml
