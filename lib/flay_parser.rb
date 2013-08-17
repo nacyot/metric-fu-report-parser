@@ -2,7 +2,7 @@ module MetricFuReport
   class FlayParser
     attr_accessor :yaml
     
-    def initialize(target: "tmp/metric_fu_sample.yml")
+    def initialize(target = "tmp/metric_fu_sample.yml")
       @yaml = Psych.load_file(target)[:flay]
     end
 

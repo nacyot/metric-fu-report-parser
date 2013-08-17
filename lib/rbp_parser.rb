@@ -2,7 +2,7 @@ module MetricFuReport
   class RbpParser
     attr_accessor :yaml
     
-    def initialize(target: "tmp/metric_fu_sample.yml")
+    def initialize(target = "tmp/metric_fu_sample.yml")
       @yaml = Psych.load_file(target)[:rails_best_practices]
     end
 
